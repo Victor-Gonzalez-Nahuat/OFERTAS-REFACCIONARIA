@@ -69,9 +69,8 @@ def main(page: ft.Page):
                                 content=ft.Column([
                                     imagen_control,
                                     ft.Text(f"{oferta.get('nombre')}", weight=ft.FontWeight.BOLD),
-                                    ft.Text(f"Precio: ${oferta.get('precio')}"),
+                                    ft.Text(f"Precio: ${int(oferta.get('precio'))*1.16:.2f}", size=20),
                                     ft.Text(f"Vigencia: {fecha_vigencia}"),
-                                    ft.Text(f"Observaciones: {oferta.get('observaciones', 'Sin observaciones')}", size=14),
                                     ft.Text(f"Código: {oferta.get('codigo', 'N/A')}", weight=ft.FontWeight.BOLD),
                                 ], spacing=10),
                             ),
