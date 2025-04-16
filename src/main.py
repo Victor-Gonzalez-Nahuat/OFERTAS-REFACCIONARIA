@@ -28,7 +28,7 @@ def main(page: ft.Page):
             ft.Row(
             controls=[
                 ft.Image(
-                    src="https://github.com/bictorrrr/Links_Recursos/blob/main/images.png?raw=true",
+                    src="https://i.ibb.co/8LxBQKh2/images.png",
                     width=60,
                     height=60,
                     fit=ft.ImageFit.CONTAIN
@@ -74,7 +74,7 @@ def main(page: ft.Page):
                                     ft.Text(f"Código: {oferta.get('codigo', 'N/A')}", weight=ft.FontWeight.BOLD),
                                 ], spacing=10),
                             ),
-                            width=300,
+                            width=350,
                             elevation=4,
                         )
                         tarjetas.append(tarjeta)
@@ -92,7 +92,7 @@ def main(page: ft.Page):
              ft.Row([
                  ft.Column([
                      ofertas_container
-                 ], height=400, scroll=ft.ScrollMode.AUTO)
+                 ], height=500, scroll=ft.ScrollMode.AUTO)
              ], alignment= ft.MainAxisAlignment.CENTER)
              )
 
