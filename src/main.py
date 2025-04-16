@@ -59,7 +59,7 @@ def main(page: ft.Page):
                         fecha_vigencia = formatear_fecha(oferta.get("fecha", ""))
                         imagen_src = oferta.get("imagen", None)
                         imagen_control = ft.Row([
-                            ft.Image(src=imagen_src, width=150, height=150, fit=ft.ImageFit.CONTAIN) if imagen_src else ft.Container(width=150, height=150, bgcolor=ft.colors.GREY_300)
+                            ft.Image(src=imagen_src, width=150, height=250, fit=ft.ImageFit.CONTAIN) if imagen_src else ft.Container(width=150, height=150, bgcolor=ft.colors.GREY_300)
                             ], alignment=ft.MainAxisAlignment.CENTER
                             )
                         
@@ -68,7 +68,8 @@ def main(page: ft.Page):
                                 padding=20,
                                 content=ft.Column([
                                     imagen_control,
-                                    ft.Text(f"{oferta.get('nombre')}"),
+                                    ft.Text(f"{oferta.get('nombre')}", weight=ft.FontWeight.BOLD),
+                                    ft.Text(f"Precio: ${oferta.get('precio')}"),
                                     ft.Text(f"Vigencia: {fecha_vigencia}"),
                                     ft.Text(f"Observaciones: {oferta.get('observaciones', 'Sin observaciones')}", size=14),
                                     ft.Text(f"Código: {oferta.get('codigo', 'N/A')}", weight=ft.FontWeight.BOLD),
