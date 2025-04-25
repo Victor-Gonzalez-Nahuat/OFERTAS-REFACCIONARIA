@@ -2,7 +2,7 @@ import flet as ft
 import requests
 from datetime import datetime
 
-API_URL_OFERTAS = "https://api-refaccionaria-production.up.railway.app/ofertas"
+API_URL_OFERTAS = "https://api-refaccionaria-production-d753.up.railway.app/ofertas"
 
 def formatear_fecha(fecha):
 
